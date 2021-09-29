@@ -13,6 +13,13 @@
 		8E1DE1F72704B215003487B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DE1E72704B214003487B4 /* ContentView.swift */; };
 		8E1DE1F82704B215003487B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1DE1E82704B215003487B4 /* Assets.xcassets */; };
 		8E1DE1F92704B215003487B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1DE1E82704B215003487B4 /* Assets.xcassets */; };
+		8E1DE2042704B332003487B4 /* StationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DE2032704B332003487B4 /* StationListViewModel.swift */; };
+		8E1DE2072704B37C003487B4 /* BusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DE2062704B37C003487B4 /* BusModel.swift */; };
+		8E1DE2092704B719003487B4 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DE2082704B719003487B4 /* StationModel.swift */; };
+		8E1DE20C2704B828003487B4 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DE20B2704B828003487B4 /* WebService.swift */; };
+		8E1DE20F2704C6D2003487B4 /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DE20E2704C6D2003487B4 /* StationView.swift */; };
+		8E1DE2122704CCE1003487B4 /* BusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DE2112704CCE1003487B4 /* BusCard.swift */; };
+		8E1DE2152704D7D2003487B4 /* BusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DE2142704D7D2003487B4 /* BusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +28,13 @@
 		8E1DE1E82704B215003487B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E1DE1ED2704B215003487B4 /* BusStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1DE1F32704B215003487B4 /* BusStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E1DE2032704B332003487B4 /* StationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListViewModel.swift; sourceTree = "<group>"; };
+		8E1DE2062704B37C003487B4 /* BusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusModel.swift; sourceTree = "<group>"; };
+		8E1DE2082704B719003487B4 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
+		8E1DE20B2704B828003487B4 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		8E1DE20E2704C6D2003487B4 /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
+		8E1DE2112704CCE1003487B4 /* BusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusCard.swift; sourceTree = "<group>"; };
+		8E1DE2142704D7D2003487B4 /* BusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +58,11 @@
 		8E1DE1E02704B214003487B4 = {
 			isa = PBXGroup;
 			children = (
+				8E1DE2102704CCD1003487B4 /* Card */,
+				8E1DE20D2704C6C4003487B4 /* View */,
+				8E1DE20A2704B80A003487B4 /* Service */,
+				8E1DE2052704B356003487B4 /* Model */,
+				8E1DE2022704B2FB003487B4 /* ViewModel */,
 				8E1DE1E52704B214003487B4 /* Shared */,
 				8E1DE1EE2704B215003487B4 /* Products */,
 			);
@@ -66,6 +85,48 @@
 				8E1DE1F32704B215003487B4 /* BusStation.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8E1DE2022704B2FB003487B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E1DE2032704B332003487B4 /* StationListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8E1DE2052704B356003487B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E1DE2062704B37C003487B4 /* BusModel.swift */,
+				8E1DE2082704B719003487B4 /* StationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E1DE20A2704B80A003487B4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8E1DE20B2704B828003487B4 /* WebService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8E1DE20D2704C6C4003487B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E1DE20E2704C6D2003487B4 /* StationView.swift */,
+				8E1DE2142704D7D2003487B4 /* BusView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E1DE2102704CCD1003487B4 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				8E1DE2112704CCE1003487B4 /* BusCard.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1DE20C2704B828003487B4 /* WebService.swift in Sources */,
+				8E1DE2072704B37C003487B4 /* BusModel.swift in Sources */,
+				8E1DE2042704B332003487B4 /* StationListViewModel.swift in Sources */,
+				8E1DE20F2704C6D2003487B4 /* StationView.swift in Sources */,
+				8E1DE2122704CCE1003487B4 /* BusCard.swift in Sources */,
+				8E1DE2092704B719003487B4 /* StationModel.swift in Sources */,
+				8E1DE2152704D7D2003487B4 /* BusView.swift in Sources */,
 				8E1DE1F62704B215003487B4 /* ContentView.swift in Sources */,
 				8E1DE1F42704B215003487B4 /* BusStationApp.swift in Sources */,
 			);
