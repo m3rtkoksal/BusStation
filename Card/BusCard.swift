@@ -24,7 +24,7 @@ struct BusCard: View {
                 HStack{
                     Text("Remaining Time")
                     Spacer()
-                    Text("\(bus.remainingTime ?? 0)")
+                    Text("\(bus.remainingTime ?? 0) min")
                 }
                 HStack{
                     Text("Plate")
@@ -41,6 +41,10 @@ struct BusCard: View {
             .background(Color("lightYellow"))
             .foregroundColor(.gray)
             .cornerRadius(15)
+            .shadow(color: Color.black.opacity(0.3),
+                    radius: 3,
+                    x: 3,
+                    y: 3)
             .padding()
     }
 }

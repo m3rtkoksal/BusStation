@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    init(){
+            UITableView.appearance().backgroundColor = .orange
+        }
+    @Environment(\.colorScheme) var currentMode
     let screenWidth = UIScreen.main.bounds.width
     @StateObject private var stationListVM = StationListViewModel()
     @State var isStationSelected : Bool = false
     @State var selectedStation = Station(stationName: "", stationCode: "", location: Location(latitude: 0, longitude: 0), buses: [])
     var body: some View {
         NavigationView {
-            ZStack {
-                Color(.white)
-                    .edgesIgnoringSafeArea(.all)
+            ZStack(alignment: .top) {
                 List{
                     ForEach(stationListVM.stations.stations ?? []) { station in
                         ZStack(alignment: .leading) {
@@ -34,13 +36,16 @@ struct ContentView: View {
                         }
                     }
                 }
+               
                     .onAppear {
                         stationListVM.getAllStations()
                     }
                 NavigationLink("", destination: StationView(selectedStation: $selectedStation), isActive: $isStationSelected)
+                    .preferredColorScheme(.light)
                     .padding()
             }
-            .navigationBarTitle("", displayMode: .inline)
+            .background(Image("BG"))
+            .navigationBarTitle("", displayMode: .large)
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .principal) {
@@ -52,6 +57,7 @@ struct ContentView: View {
                             .padding(.trailing)
                             .font(.system(size: 20))
                         Spacer()
+                        
                     }
                     .frame(width: screenWidth - 20)
                 }
