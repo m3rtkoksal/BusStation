@@ -20,6 +20,9 @@ struct BusView: View {
             Map(coordinateRegion: $region, interactionModes: .all, annotationItems: [bus], annotationContent: { (bus) in
                 return MapMarker.init(coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(bus.location?.latitude ?? 0.0), longitude: CLLocationDegrees(bus.location?.longitude ?? 0.0)))
             })
+                .onAppear{
+                    self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: bus.location?.latitude ?? 0, longitude: bus.location?.longitude ?? 0), span: MKCoordinateSpan(latitudeDelta: 0, longitudeDelta: 0))
+                }
                 .edgesIgnoringSafeArea(.bottom)
                 .navigationBarTitle(bus.plate ?? "", displayMode: .inline)
         }
